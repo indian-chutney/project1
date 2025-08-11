@@ -85,12 +85,24 @@ const Navbar1 = ({
         <Button
           className="h-10 px-4 text-md border-orange-500 text-orange-500 hover:bg-orange-50"
           variant="outline"
+          onClick={() => {
+            window.open("/signup", "_blank", "noopener,noreferrer");
+          }}
         >
           {authLinks.register.text}
         </Button>
 
         {/* Login Button - solid orange */}
-        <Button className="h-10 px-4 text-md bg-orange-500 hover:bg-orange-600 text-white">
+        <Button
+          onClick={() => {
+            window.open(
+              "https://admin.bharatpaye.com/",
+              "_blank",
+              "noopener,noreferrer",
+            );
+          }}
+          className="h-10 px-4 text-md bg-orange-500 hover:bg-orange-600 text-white"
+        >
           {authLinks.login.text}
         </Button>
       </div>

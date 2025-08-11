@@ -1,4 +1,4 @@
-import BBPS from "@/assets/BBPS";
+import BBPSsvg from "./../assets/BBPS.svg";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import InfiniteScroll from "@/components/ui/InfiniteCard";
 import {
@@ -46,7 +46,7 @@ const Services = () => {
         "Booking gas cylinder and paying gas bill is now just a few clicks away. We offer an efficient and user-friendly platform for all your gas bookings and payments.",
     },
     {
-      logo: <BBPS className="h-10" />,
+      logo: <img src={BBPSsvg} alt="BBPS Logo" className="h-10" />,
       text: "Bharat Bill Payment System (BBPS)",
       description:
         "Paying your bills has never been easier. With our integrated BBPS service, you can quickly and securely pay all your utility bills. Enjoy the convenience of managing all your payments in one place.",
@@ -61,7 +61,6 @@ const Services = () => {
         At BHARAT PAYE we provide the best services to our customers
       </p>
       <InfiniteScroll
-        speed={30}
         items={cards.map((card, index) => (
           <Card
             key={index}
@@ -80,7 +79,7 @@ const Services = () => {
             </CardContent>
           </Card>
         ))}
-      ></InfiniteScroll>
+      />
     </div>
   );
 };

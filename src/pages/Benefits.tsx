@@ -1,29 +1,34 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Lock, CreditCardSolid, DashboardSpeed } from "iconoir-react";
+import Profit from "./../assets/profit.svg";
+import SuperFast from "./../assets/rocket.svg";
+import SimpleUI from "./../assets/ui.svg";
+import Trusted from "./../assets/secure.svg";
 
 const Benefits = () => {
   const cards = [
     {
-      logo: <Lock strokeWidth={1.7} className="w-8 h-8 text-blue-900" />,
-      text: "Secure Transactions",
+      logo: <img src={Profit} alt="High Profit Logo" className="h-10" />,
+      text: "High Profit",
       description:
-        "Our robust systems and stringent security ensure your sensitive information is protected.",
+        "BharatPaye gives Opportunity to Earn Highest Profit in Industry.",
     },
     {
-      logo: (
-        <CreditCardSolid strokeWidth={1.7} className="w-8 h-8 text-blue-900" />
-      ),
-      text: "Continuous Innovation",
+      logo: <img src={SuperFast} alt="Super Fast Logo" className="h-10" />,
+      text: "Super Fast",
       description:
-        "We strive to stay ahead of industry trends and technologies.",
+        "BharatPaye provides Super Fast Service with Highest Success Ratio.",
     },
     {
-      logo: (
-        <DashboardSpeed strokeWidth={1.7} className="w-8 h-8 text-blue-900" />
-      ),
-      text: "Maximum Performance",
+      logo: <img src={SimpleUI} alt="Simple UI Logo" className="h-10" />,
+      text: "Simple UI",
       description:
-        "Experience unmatched speed and reliability with our services.",
+        "BharatPaye is Very Easy and Simple to Use with Smooth Interface.",
+    },
+    {
+      logo: <img src={Trusted} alt="Trusted Logo" className="h-10" />,
+      text: "Trusted",
+      description:
+        "BharatPaye is 100% Trustable with Mutual Cooperation & Transparency.",
     },
   ];
 

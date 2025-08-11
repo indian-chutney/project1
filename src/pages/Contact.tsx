@@ -50,23 +50,43 @@ export default function SiteFooter() {
         </FooterColumn>
 
         {/* Contact */}
+
         <FooterColumn>
           <h3 className="font-semibold text-lg">Contact</h3>
+
+          {/* Email */}
           <Button
             variant="link"
             className="text-gray-300 hover:text-orange-500 p-0 h-auto justify-start"
+            onClick={() => {
+              window.location.href = "mailto:info@bharatpaye.com";
+            }}
           >
-            <Mail size={16} /> info@bharatpaye.com{" "}
+            <Mail size={16} /> info@bharatpaye.com
           </Button>
+
+          {/* Phone */}
           <Button
             variant="link"
             className="text-gray-300 hover:text-orange-500 p-0 h-auto justify-start"
+            onClick={() => {
+              window.location.href = "tel:+919398619837";
+            }}
           >
-            <Phone size={16} /> +91 93986 19837{" "}
+            <Phone size={16} /> +91 93986 19837
           </Button>
+
+          {/* Address */}
           <Button
             variant="link"
             className="text-gray-300 hover:text-orange-500 p-0 h-auto justify-start"
+            onClick={() => {
+              window.open(
+                "https://maps.app.goo.gl/bCRKwcYGDsvgscPC6?g_st=aw",
+                "_blank",
+                "noopener,noreferrer",
+              );
+            }}
           >
             <MapPin size={16} /> Hyderabad, India
           </Button>
@@ -78,18 +98,31 @@ export default function SiteFooter() {
           <Button
             variant="link"
             className="text-gray-300 hover:text-orange-500 p-0 h-auto justify-start"
+            onClick={() => {
+              window.open("/privacy-policy", "_blank", "noopener,noreferrer");
+            }}
           >
             Privacy Policy
           </Button>
           <Button
             variant="link"
             className="text-gray-300 hover:text-orange-500 p-0 h-auto justify-start"
+            onClick={() => {
+              window.open(
+                "/terms-and-conditions",
+                "_blank",
+                "noopener,noreferrer",
+              );
+            }}
           >
             Terms of Service
           </Button>
           <Button
             variant="link"
             className="text-gray-300 hover:text-orange-500 p-0 h-auto justify-start"
+            onClick={() => {
+              window.open("/refund-policy", "_blank", "noopener,noreferrer");
+            }}
           >
             Refund and Cancellation Policy
           </Button>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/Logo";
+import Intro from "./../assets/website intro.mp4";
 
 const Home = () => {
   return (
@@ -19,6 +20,13 @@ const Home = () => {
         <Button
           variant="default"
           className="mt-4 h-10 px-4 text-md bg-orange-500 hover:bg-orange-600 text-white"
+          onClick={() => {
+            window.open(
+              "https://admin.bharatpaye.com/",
+              "_blank",
+              "noopener,noreferrer",
+            );
+          }}
         >
           Get Started
         </Button>
@@ -26,7 +34,7 @@ const Home = () => {
 
       <div className="hidden md:block mt-8 md:mt-0 md:ml-10 flex-shrink-0 w-full md:w-1/2">
         <video
-          src="https://bharatpaye.tech/wp-content/uploads/2024/08/WhatsApp-Video-2024-08-29-at-3.57.23-PM.mp4"
+          src={Intro}
           className="w-full rounded-xl shadow-lg border-4 border-blue-500"
           autoPlay
           loop

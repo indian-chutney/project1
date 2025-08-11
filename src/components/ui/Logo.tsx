@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./../../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 interface LogoProps {
   size?: "small" | "medium" | "large";
@@ -18,8 +19,14 @@ const textSizeMap: Record<NonNullable<LogoProps["size"]>, string> = {
 };
 
 const Logo: React.FC<LogoProps> = ({ size = "medium" }) => {
+  const navigator = useNavigate();
   return (
-    <div className="flex items-center gap-[8px] cursor-pointer">
+    <div
+      className="flex items-center gap-[8px] cursor-pointer"
+      onClick={() => {
+        navigator("/");
+      }}
+    >
       <img src={logo} alt="Logo" className={`${sizeMap[size]}`} />
 
       <div className={`flex gap-[2px] tracking-tighter ${textSizeMap[size]}`}>
